@@ -1,0 +1,20 @@
+{% extends "layout.html" %}
+
+{% block title %}DigitalHub{% endblock %}
+{% block navbar %}DigitalHub{% endblock %}
+
+{% block main %}
+
+    <div id="mainpage-module-container">
+
+        {% for module in modules %}
+            <a href="{{ url_for(module) }}" id="modulebox-link">
+                <div id="modulebox">
+                    <p>{{ module[0]|upper }}{{ module[1:] }}<br>Hub</p>
+                </div>
+            </a>
+        {% endfor %}
+          
+    </div>
+
+{% endblock %}
